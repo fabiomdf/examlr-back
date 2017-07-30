@@ -14,6 +14,10 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "userId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -22,6 +26,11 @@
       "type": "belongsTo",
       "model": "Question",
       "foreignKey": ""
+    },
+    "users": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
     }
   },
   "acls": [

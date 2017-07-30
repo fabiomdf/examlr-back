@@ -10,6 +10,10 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -23,6 +27,11 @@
       "type": "hasMany",
       "model": "Question",
       "foreignKey": ""
+    },
+    "users": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
     }
   },
   "acls": [
